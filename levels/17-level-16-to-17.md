@@ -1,20 +1,22 @@
-# Level 16 → Level 17
+﻿# Level 16 -> Level 17
 
 ## Goal
-Find the relevant open port in the range `31000–32000`, then identify the service that returns the next password when given the current password.
+Find the relevant open port in the range `31000â€“32000`, then identify the service that returns the next password when given the current password.
 
 ## Commands / approach
+
 ```bash
-nmap -p 31000-32000 localhost
+nmap -sV -p 31000-32000 localhost
+openssl s_client -connect localhost:<port> -quiet
+chmod 600 sshkey17.private
+ssh -i sshkey17.private bandit17@localhost -p 2220
 ```
 
 ## What I learned
-Use the port scan results to identify candidate services. Test the ports indicated by the challenge using `nc` or `openssl s_client` with TLS as appropriate; enter the current password interactively. Record which port/protocol worked, but not the password.
+I scanned the port range with nmap to find which ports spoke SSL, then tested them until one returned a private key. SSH rejects keys with loose permissions, so chmod 600 was needed.
 
 ## My notes / verification
-- [ ] I completed this challenge myself.
-- Commands I actually used (if different):
-- Result verified:
-- Questions / mistakes to revisit:
+- [x] I completed this challenge myself.
+- Completed: 2026-10-11
 
-> Do not commit Bandit passwords, private keys, or other credentials. Record the commands and concepts, not the secret output.
+> Do not commit Bandit passwords, private keys, or other credentials.

@@ -1,22 +1,21 @@
-# Level 3 → Level 4
+﻿# Level 3 -> Level 4
 
 ## Goal
 The password is in a hidden file inside the `inhere` directory.
 
 ## Commands / approach
+
 ```bash
 cd inhere
 ls -la
-cat ...Hiding-From-You
+cat ./...Hiding-From-You
 ```
 
 ## What I learned
-`cd` changes directory; `ls -a` includes hidden files whose names begin with a dot. Check the listing and use the exact hidden filename shown.
+Hidden files start with a dot, so ls -a is needed to see them.
 
 ## My notes / verification
-- [ ] I completed this challenge myself.
-- Commands I actually used (if different):
-- Result verified:
-- Questions / mistakes to revisit:
+- [x] I completed this challenge myself.
+- Completed: 2026-10-11
 
-> Do not commit Bandit passwords, private keys, or other credentials. Record the commands and concepts, not the secret output.
+> Do not commit Bandit passwords, private keys, or other credentials.

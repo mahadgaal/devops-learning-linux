@@ -1,20 +1,19 @@
-# Level 14 → Level 15
+﻿# Level 14 -> Level 15
 
 ## Goal
 Submit the current level's password to the service listening on localhost port `30000`.
 
 ## Commands / approach
+
 ```bash
 nc localhost 30000
 ```
 
 ## What I learned
-`nc` (netcat) opens a TCP connection. Enter the current level password into the connection interactively; do not paste it into these notes.
+netcat opens a raw TCP connection. I sent the current password to port 30000 and the service replied with the next one.
 
 ## My notes / verification
-- [ ] I completed this challenge myself.
-- Commands I actually used (if different):
-- Result verified:
-- Questions / mistakes to revisit:
+- [x] I completed this challenge myself.
+- Completed: 2026-10-11
 
-> Do not commit Bandit passwords, private keys, or other credentials. Record the commands and concepts, not the secret output.
+> Do not commit Bandit passwords, private keys, or other credentials.

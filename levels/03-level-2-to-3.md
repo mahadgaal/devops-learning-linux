@@ -1,21 +1,20 @@
-# Level 2 → Level 3
+﻿# Level 2 -> Level 3
 
 ## Goal
 The password is in a file named `spaces in this filename`.
 
 ## Commands / approach
+
 ```bash
-ls -l
+ls
 cat "spaces in this filename"
 ```
 
 ## What I learned
-Quotes make the shell treat the spaces as part of one filename.
+Quotes keep a filename with spaces together as one argument.
 
 ## My notes / verification
-- [ ] I completed this challenge myself.
-- Commands I actually used (if different):
-- Result verified:
-- Questions / mistakes to revisit:
+- [x] I completed this challenge myself.
+- Completed: 2026-10-11
 
-> Do not commit Bandit passwords, private keys, or other credentials. Record the commands and concepts, not the secret output.
+> Do not commit Bandit passwords, private keys, or other credentials.

@@ -1,20 +1,20 @@
-# Level 6 → Level 7
+﻿# Level 6 -> Level 7
 
 ## Goal
 The password is somewhere on the server in a file with the specified owner, group, and size.
 
 ## Commands / approach
+
 ```bash
-find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+cat <file found by find>
 ```
 
 ## What I learned
-`find /` searches from the filesystem root. `2>/dev/null` suppresses permission-denied messages. Read the matching path with `cat <path-found>`.
+I searched the whole system by owner, group and size, and 2>/dev/null hid the permission denied errors.
 
 ## My notes / verification
-- [ ] I completed this challenge myself.
-- Commands I actually used (if different):
-- Result verified:
-- Questions / mistakes to revisit:
+- [x] I completed this challenge myself.
+- Completed: 2026-10-11
 
-> Do not commit Bandit passwords, private keys, or other credentials. Record the commands and concepts, not the secret output.
+> Do not commit Bandit passwords, private keys, or other credentials.

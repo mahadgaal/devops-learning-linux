@@ -1,20 +1,19 @@
-# Level 17 → Level 18
+﻿# Level 17 -> Level 18
 
 ## Goal
 Compare `passwords.old` and `passwords.new`; the password is the changed line.
 
 ## Commands / approach
+
 ```bash
-diff -u passwords.old passwords.new
+diff passwords.old passwords.new
 ```
 
 ## What I learned
-`diff` displays differences between files. Identify the changed line and keep the password out of the repository.
+diff shows the lines that differ between two files. The changed line in the new file was the password.
 
 ## My notes / verification
-- [ ] I completed this challenge myself.
-- Commands I actually used (if different):
-- Result verified:
-- Questions / mistakes to revisit:
+- [x] I completed this challenge myself.
+- Completed: 2026-10-11
 
-> Do not commit Bandit passwords, private keys, or other credentials. Record the commands and concepts, not the secret output.
+> Do not commit Bandit passwords, private keys, or other credentials.

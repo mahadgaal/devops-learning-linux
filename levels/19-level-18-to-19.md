@@ -1,20 +1,19 @@
-# Level 18 → Level 19
+﻿# Level 18 -> Level 19
 
 ## Goal
 A modified shell configuration logs you out. Run a command directly over SSH to read `readme` without opening an interactive shell.
 
 ## Commands / approach
+
 ```bash
-ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat readme"
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
 ```
 
 ## What I learned
-SSH can execute a remote command directly. A non-interactive command avoids relying on an interactive login shell.
+The .bashrc logged me out on connect. Passing a command to ssh runs it without starting an interactive shell, so I could still read the file.
 
 ## My notes / verification
-- [ ] I completed this challenge myself.
-- Commands I actually used (if different):
-- Result verified:
-- Questions / mistakes to revisit:
+- [x] I completed this challenge myself.
+- Completed: 2026-10-11
 
-> Do not commit Bandit passwords, private keys, or other credentials. Record the commands and concepts, not the secret output.
+> Do not commit Bandit passwords, private keys, or other credentials.

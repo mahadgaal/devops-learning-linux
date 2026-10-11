@@ -1,20 +1,19 @@
-# Level 15 → Level 16
+﻿# Level 15 -> Level 16
 
 ## Goal
 Submit the current password to the SSL/TLS service on localhost port `30001`.
 
 ## Commands / approach
+
 ```bash
 openssl s_client -connect localhost:30001 -quiet
 ```
 
 ## What I learned
-`openssl s_client` creates a TLS client connection. Enter the current password when connected.
+This service needed TLS, so I used openssl s_client, which works like netcat but encrypted. The -quiet option hides the handshake output.
 
 ## My notes / verification
-- [ ] I completed this challenge myself.
-- Commands I actually used (if different):
-- Result verified:
-- Questions / mistakes to revisit:
+- [x] I completed this challenge myself.
+- Completed: 2026-10-11
 
-> Do not commit Bandit passwords, private keys, or other credentials. Record the commands and concepts, not the secret output.
+> Do not commit Bandit passwords, private keys, or other credentials.
